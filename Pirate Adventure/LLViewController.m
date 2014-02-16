@@ -25,7 +25,7 @@
     self.tiles = [factory tiles];
     self.character = [factory character];
     self.boss = [factory boss];
-    self.currentPoint = CGPointMake(0, 0);
+    self.currentPoint = CGPointMake(1, 1);
     [self updateCharacterStatsForArmor:nil withWeapons:nil withHealthEffect:0];
     [self updateTitle];
     [self updateButtons];
