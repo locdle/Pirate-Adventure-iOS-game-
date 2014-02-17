@@ -8,6 +8,7 @@
 
 #import "LLFactory.h"
 #import "LLTile.h"
+
 @implementation LLFactory
 
 -(NSArray *)tiles{
@@ -45,8 +46,6 @@
     tile3.healthEffect = 12;
     tile3.actionButtonName = @"Stop at the dock";
     
-    NSMutableArray *firstColumn =[[NSMutableArray alloc] initWithObjects:tile1, tile2, tile3, nil];
-    
     LLTile *tile4 = [[LLTile alloc] init];
     tile4.story= @"You have found a parrot. This can be used in your armor slot. Parrots are a great defender and are fiercly loyal to their captain!";
     tile4.backgroundImage = [UIImage imageNamed:@"PirateParrot.jpg"];
@@ -64,8 +63,6 @@
     tile6.backgroundImage = [UIImage imageNamed:@"PiratePlank.jpg"];
     tile6.healthEffect = -22;
     tile6.actionButtonName = @"Show no fear";
-    
-    NSMutableArray *secondColumn =[[NSMutableArray alloc] initWithObjects:tile4, tile5, tile6, nil];
     
     LLTile *tile7 = [[LLTile alloc] init];
     tile7.story= @"You have sighted a pirate battle off the coast. Should we interverne?";
@@ -85,8 +82,6 @@
     tile9.healthEffect = 20;
     tile9.actionButtonName =@"Take treasure";
     
-    NSMutableArray *thirdColumn =[[NSMutableArray alloc] initWithObjects:tile7, tile8, tile9, nil];
-    
     LLTile *tile10 = [[LLTile alloc] init];
     tile10.story= @"A group of pirates attempts to board your ship.";
     tile10.backgroundImage = [UIImage imageNamed:@"PirateAttack.jpg"];
@@ -104,8 +99,19 @@
     tile12.backgroundImage = [UIImage imageNamed:@"PirateBoss.jpeg"];
     tile12.healthEffect = -15;
     tile12.actionButtonName = @"Fight";
+
+
+    
+    
+    NSMutableArray *firstColumn =[[NSMutableArray alloc] initWithObjects:tile1, tile2, tile3, nil];
+    
+    NSMutableArray *secondColumn =[[NSMutableArray alloc] initWithObjects:tile4, tile5, tile6, nil];
+    
+    NSMutableArray *thirdColumn =[[NSMutableArray alloc] initWithObjects:tile7, tile8, tile9, nil];
     
     NSMutableArray *fourthColumn =[[NSMutableArray alloc] initWithObjects:tile10, tile11, tile12, nil];
+    
+    
     
     NSArray *tiles = [[NSArray alloc] initWithObjects:firstColumn, secondColumn, thirdColumn, fourthColumn, nil];
     
