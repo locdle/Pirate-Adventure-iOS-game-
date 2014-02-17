@@ -100,17 +100,25 @@
     tile12.healthEffect = -15;
     tile12.actionButtonName = @"Fight";
 
+    
+    NSMutableArray *randomArray = [[NSMutableArray alloc] initWithObjects:tile2, tile3, tile4, tile5, tile6, tile7, tile8, tile9, tile10, tile11, tile12, nil];
+    
+//    NSMutableArray *firstColumn =[[NSMutableArray alloc] initWithObjects:tile1, tile2, tile3, nil];
+//    
+//    NSMutableArray *secondColumn =[[NSMutableArray alloc] initWithObjects:tile4, tile5, tile6, nil];
+//    
+//    NSMutableArray *thirdColumn =[[NSMutableArray alloc] initWithObjects:tile7, tile8, tile9, nil];
+//    
+//    NSMutableArray *fourthColumn =[[NSMutableArray alloc] initWithObjects:tile10, tile11, tile12, nil];
 
+    NSMutableArray *firstColumn =[[NSMutableArray alloc] initWithObjects:tile1, randomArray[arc4random()%12], randomArray[arc4random()%12], nil];
     
+    NSMutableArray *secondColumn =[[NSMutableArray alloc] initWithObjects:randomArray[arc4random()%12], randomArray[arc4random()%12], randomArray[arc4random()%12], nil];
     
-    NSMutableArray *firstColumn =[[NSMutableArray alloc] initWithObjects:tile1, tile2, tile3, nil];
+    NSMutableArray *thirdColumn =[[NSMutableArray alloc] initWithObjects:randomArray[arc4random()%12], randomArray[arc4random()%12], randomArray[arc4random()%12], nil];
     
-    NSMutableArray *secondColumn =[[NSMutableArray alloc] initWithObjects:tile4, tile5, tile6, nil];
-    
-    NSMutableArray *thirdColumn =[[NSMutableArray alloc] initWithObjects:tile7, tile8, tile9, nil];
-    
-    NSMutableArray *fourthColumn =[[NSMutableArray alloc] initWithObjects:tile10, tile11, tile12, nil];
-    
+    NSMutableArray *fourthColumn =[[NSMutableArray alloc] initWithObjects:randomArray[arc4random()%12], randomArray[arc4random()%12], randomArray[arc4random()%12], nil];
+
     
     
     NSArray *tiles = [[NSArray alloc] initWithObjects:firstColumn, secondColumn, thirdColumn, fourthColumn, nil];
